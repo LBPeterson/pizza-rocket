@@ -1,0 +1,23 @@
+.card {
+  background-color: white;
+  cursor: pointer;
+
+  &.heart, &.diamond {
+    color: firebrick;
+  }
+  &.spade, &.club {
+    color: black;
+  }
+
+  &:not(:first-of-type) {
+    margin-left: -0.8ch;
+  }
+
+  &:hover {
+    transform: rotate(180deg);
+
+    & + .card {
+      margin-left: 0ch;
+    }
+  }
+}
